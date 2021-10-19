@@ -1,0 +1,49 @@
+@mixin trans($s) {
+  transition: all $s ease-in-out;
+}
+
+@mixin flex($dir: row, $align: initial, $jtf: initial) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $jtf;
+}
+
+@mixin abCenter($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translateX(-$left) translateY(-$top);
+}
+
+@mixin breakpoint($point) {
+  @if $point==small {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+
+  @if $point==tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+@mixin fontawesome {
+  font-family: FontAwesome;
+  text-rendering: auto;
+}
+
+//
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin textCut($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

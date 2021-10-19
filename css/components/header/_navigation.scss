@@ -1,0 +1,111 @@
+.header-nav {
+  @include trans(.2s);
+  position: fixed;
+  background-color: transparent;
+  padding: .2rem 0; 
+  width: 100%;
+  z-index: 10;
+
+  &.show {
+    background-color: $color2-blur2;
+  }
+
+  &>.wrap {
+    @include flex(row, center, space-between);
+    padding: 5px 10px;
+  }
+
+  &:hover {
+    background-color: $color2;
+    @include trans(.2s);
+  }
+
+  #collaspe-btn {
+    display: none;
+    color: $color3;
+    font-weight: 900;
+
+    @include breakpoint(tablet) {
+      display: block;
+      transform: none;
+    }
+  }
+
+    // responsive
+  @include breakpoint(tablet) {
+    background-color: $color2;
+    padding: 0;
+
+    &>.wrap {
+      @include flex(column, center, space-between);
+    }
+
+    nav {
+      @include flex(column, center, center);
+      @include trans(.2s);
+      width: 100%;
+      opacity: 1;
+    }
+
+    .hide {
+      @include trans(.2s);
+      display: none;
+      overflow: hidden;
+      opacity: 0;
+
+      * {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-nav-list {
+  @include flex(row, center, center);
+
+  li {
+    cursor: pointer;
+  }
+  
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: $color3;
+    font-family: $font;
+    font-size: $font-size + 2;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color1;
+    }
+  }
+
+  svg {
+    margin: 0 20px; 
+    color: $color3;
+  }
+
+  @include breakpoint(tablet) {
+    @include flex(column, center, center);
+    position: relative;
+    height: auto;
+    order: 2;
+
+    &, li {
+      width: 100%;
+    }
+
+    svg {
+      display: block;
+      margin: 10px auto;
+
+    }
+
+    &>.cart {
+      display: none;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "columns";
+
+#footer {
+  padding: 1rem 0 2rem;
+  background: url(../res/img/background.png) repeat;
+}
+
+.copyright {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.contact-register {
+  margin: 15px auto;
+  text-align: center;
+
+  input {
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+
+    &[type="submit"] {
+      background-color: $color1;
+      color: $color3;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    input {
+      margin-top: 10px;
+    }
+  }
+}

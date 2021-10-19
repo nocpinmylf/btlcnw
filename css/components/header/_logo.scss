@@ -1,0 +1,50 @@
+.logo { 
+  @include flex(row, null, space-between);
+  font-size: $font-size * 2;
+  user-select: none;
+
+  * {
+    font-style: normal;
+    font-weight: 900;
+    font-family: $font-logo;
+  }
+
+  .word-l {
+    color: $color3;
+  }
+
+  .word-r {
+    color: $color1;
+  }
+
+  &-mobile {
+    display: flex;
+
+    &>.cart {
+      @include trans(.2s);
+      display: none;
+      overflow: hidden;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    width: 100%;
+
+    // * {
+    //   transform: scale(.8);
+    //   vertical-align: baseline;
+    // }
+
+    &-mobile>.cart {
+      display: block;
+      overflow: visible;
+      font-size: 23px;
+      transform: translateY(7px);
+      margin: 0 40px 0 0;
+
+      & .number {
+        font-size: 11px;
+      }
+    }
+  } 
+}

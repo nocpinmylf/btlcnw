@@ -1,0 +1,92 @@
+.search-form {
+  @include abCenter(70%, 50%);
+  @include flex(row, center, center);
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $color2;
+
+  input {
+    height: 60px;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  label {
+    @include abCenter(25px, 25px);
+    transform: none;
+    font-size: $font-size + 10;
+    cursor: default;
+  }
+
+  &-input {
+    width: 75%;
+    padding: 15px 15px 15px 50px;
+    margin-right: 10px;
+    background-color: $color3-blur;
+    font-size: $font-size + 10;
+    color: $color2;
+    user-select: none;  // placeholder
+  }
+
+  &-submit {
+    width: 25%;
+    min-width: 150px;
+    background-color: $color1;
+    color: $color3;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: $font-size + 10;
+    transition: .1s;
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    width: 90%;
+
+    input {
+      height: 40px;
+    }
+  
+    label {
+      top: 20px;
+      left: 20px;
+      font-size: $font-size + 3;
+    }
+  
+    &-input {
+      padding: 10px 15px 10px 35px;
+      font-size: $font-size + 3;
+    }
+  
+    &-submit {
+      min-width: 110px;
+      font-size: $font-size + 3;
+    }
+  }
+
+  @include breakpoint(small) {
+    input {
+      height: 35px;
+    }
+  
+    label {
+      top: 18px;
+      left: 18px;
+      font-size: $font-size;
+    }
+  
+    &-input {
+      padding: 10px 15px 10px 27px;
+      font-size: $font-size;
+    }
+  
+    &-submit {
+      min-width: 110px;
+      font-size: $font-size;
+    }
+  }
+}

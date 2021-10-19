@@ -1,0 +1,71 @@
+.info {
+  color: $color3;
+  &-col {
+    @include flex(row, null, center);
+    flex-wrap: wrap;
+
+    section {
+      width: 25%;
+      padding: 0 10px;
+    }
+
+    &-title {
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: $font-size + 2;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 40%;
+        height: 2px;
+        background-color: $color1;
+        top: 100%;
+        left: 30%;
+      }
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      width: 100%;
+
+      li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      a {
+        color: $color3;
+
+        &:hover {
+          color: $color1;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &-col {
+      section {
+        width: 50%;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    @include flex(column, null, center);
+
+    &-col {
+      section {
+        width: 100%;
+      }
+    }
+  }
+}

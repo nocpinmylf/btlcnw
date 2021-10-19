@@ -1,0 +1,27 @@
+.cart {
+  position: relative;
+  color: $color3;
+
+  .number {
+    @include abCenter(-12px, 57%);
+    transform: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    font-weight: 900;
+    color: $color3;
+    background-color: $color1;
+    text-align: center;
+    user-select: none;
+  }
+
+  @include breakpoint(tablet) {
+  
+    .number {
+      top: -3px;
+      left: 51%;
+    }
+    
+  }
+}

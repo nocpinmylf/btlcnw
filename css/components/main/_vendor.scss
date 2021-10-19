@@ -1,0 +1,25 @@
+.vendor {
+  ul {
+    @include flex(row, center, space-between);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: $color3;
+    overflow: hidden;
+
+    &>li {
+      z-index: 0;
+
+      &:hover {
+        z-index: 1;
+      }
+    }
+
+    img {
+      transition: .2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
