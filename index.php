@@ -16,13 +16,16 @@
   <!-- script -->
   <script defer src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script defer src="js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-  <script defer src="js/owl.carousel.min.js" crossorigin="anonymous"></script>
   <script defer src="js/font-awesome.js" crossorigin="anonymous"></script>
+  <script defer src="js/slick.js" crossorigin="anonymous"></script>
   <script defer src="js/javascript.js"></script>
 </head>
 <body>
     <!-- header -->
-  <?php include_once("header.php"); ?>
+  <header id="header">
+    <?php include_once("header.php"); ?>
+    <?php include_once("banner.php"); ?>
+  </header>
     <!-- main --> 
   <main id="main">
       <!-- news section -->
@@ -32,10 +35,7 @@
         </div>
         <div class="section-news wrap">
           <?php 
-            // news slide
             require_once("news-slide.php");
-
-            // news box
             require_once("news-box.php");
           ?>
         </div>
@@ -48,6 +48,7 @@
       </div>
       
       <div class="section-main">
+        
         <?php
           ProductItem('item1.jpg', 'Bộ Vi Xử Lý Core i5', 'Core i5 9400 / 9M / 2.9GHz upto 4.1GHz / 6 nhân 6 luồng', 5, 139, 0);
           ProductItem('item2.jpg', 'Bộ Vi Xử Lý AMD', 'AMD Athlon™ 200GE 3.2GHz / 2 nhân 4 luồng / Radeon™ Vega 3 Graphics', 4, 99, 0);
@@ -106,6 +107,7 @@
       </div>
     </div>
   </main>
+
     <!-- footer -->
   <?php include_once("footer.php"); ?>
     <!-- modal -->
@@ -115,8 +117,8 @@
           <img src="res/img/modal_qc.jpg" alt="">
           <span id="close-modal"><i class="fas fa-times"></i></span>
         </div>
-      </div> -->
-    </div>
+      </div> 
+    </div>-->
 
 </body>
 </html>

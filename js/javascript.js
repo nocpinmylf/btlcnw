@@ -1,15 +1,13 @@
 $(document).ready(() => {
-  $(".owl-carousel").owlCarousel({
-    loop:true,
-    items:1,
-    center: true,
-    margin:0,
-    nav: true,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-    lazyLoad:true,
-    autoplay:true,
-    autoplayTimeout:4000,
-    autoplayHoverPause:true
+  $('.slick-carousel').slick({
+    lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows:true,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 4000
   });
 
   const collapseBTN = document.getElementById('collaspe-btn');
