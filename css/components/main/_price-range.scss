@@ -1,0 +1,52 @@
+.price-range-slider {
+  padding: 10px 20px;
+
+	.range-value {
+    @include flex(row, center, space-between);
+		margin: 0;
+
+		input {
+			width: 40%;
+			color: $color2;
+			font-size: $font-size;
+			font-weight: initial;
+      font-family: $font;
+			//box-shadow: none;
+			//border: none;
+			margin: 20px 0 0 0;
+		}
+
+    span {
+      color: $color3;
+      font-weight: 900;
+      font-size: 2em;
+      font-family: $font;
+      margin-top: 10px;
+    }
+	}
+	
+	.range-bar {
+		border: 1px solid $color1-blur;
+		background: #000;
+		height: 5px;	
+
+		
+		.ui-slider-range {
+			background: $color1;
+		}
+		
+		.ui-slider-handle {
+			border: none;
+			border-radius: 25px;
+			background: $color3;
+			border: 2px solid $color1;
+			height: 17px;
+			width: 17px;
+			top: -0.52em;
+			cursor: pointer;
+		}
+		.ui-slider-handle + span {
+			background: $color1;
+		}
+	}
+}

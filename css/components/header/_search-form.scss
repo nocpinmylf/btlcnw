@@ -1,7 +1,6 @@
 .search-form {
-  @include abCenter(70%, 50%);
   @include flex(row, center, center);
-  width: 60%;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   background-color: $color2;

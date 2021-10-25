@@ -8,6 +8,11 @@
   position: relative;
   height: 80vh;
   background-color: $color2-blur;
+
+  .search-form {
+    @include abCenter(70%, 50%);
+    width: 100%;
+  }
 }
 
 .banner-slogan {

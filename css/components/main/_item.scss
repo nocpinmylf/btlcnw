@@ -1,0 +1,76 @@
+.item {
+  position: relative;
+  display: block;
+  width: 300px;
+  padding: 10px;
+
+  .price {
+    text-align: center;
+    font-weight: bold;
+    color: $color3;
+    width: 100%;
+    font-size: $font-size + 3;
+    background-color: $color1-blur;
+  }
+
+  span {
+    @include size(100%, 100%);
+    @include flex(column, center, flex-start);
+    @include trans(.2s);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    color: $color3;
+    padding: 25px;
+    background-color: $color2-blur2;
+    overflow: hidden;
+    z-index: 1;
+
+    h4 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: $font-size + 2;
+    }
+
+    .rate {
+      margin-top: 10px;
+      color: #ffe400;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 15px;
+      background-color: $color1;
+      color: $color3;
+      border: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .item {
+    width: 250px;
+
+    span {
+      h4 {
+        font-size: $font-size;
+      }
+
+      .rate {
+        color: #ffe400;
+      }
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .item {
+    width: 180px;
+  }
+}

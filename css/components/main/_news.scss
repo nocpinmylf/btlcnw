@@ -1,3 +1,42 @@
+.slick-carousel { 
+  grid-area: carousel;
+  overflow: hidden;
+
+  & img {
+    object-fit: cover;
+  }
+}
+
+.news1 { 
+  grid-area: news1;
+  background: url('../res/img/news/news1.jpg') no-repeat center/ cover;
+}
+
+.news2 { 
+  grid-area: news2; 
+  background: url('../res/img/news/news2.jpg') no-repeat center/ cover;
+}
+
+.news3 { 
+  grid-area: news3; 
+  background: url('../res/img/news/news3.jpg') no-repeat center/ cover;
+}
+
+.news4 { 
+  grid-area: news4;
+  background: url('../res/img/news/news4.jpg') no-repeat center/ cover;
+}
+
+.news5 { 
+  grid-area: news5;
+  background: url('../res/img/news/news5.jpg') no-repeat center/ cover;
+}
+
+.news6 { 
+  grid-area: news6;
+  background: url('../res/img/news/news6.jpg') no-repeat center/ cover;
+}
+
 .section-news {
   height: 80vh;
   width: 100%;
@@ -11,45 +50,6 @@
     "carousel carousel carousel news1"
     "carousel carousel carousel news2"
     "news6 news5 news4 news3";
-
-  .slick-carousel { 
-    grid-area: carousel;
-    overflow: hidden;
-
-    & img {
-      object-fit: cover;
-    }
-  }
-
-  .news1 { 
-    grid-area: news1;
-    background: url('../res/img/news/news1.jpg') no-repeat center/ cover;
-  }
-  
-  .news2 { 
-    grid-area: news2; 
-    background: url('../res/img/news/news2.jpg') no-repeat center/ cover;
-  }
-  
-  .news3 { 
-    grid-area: news3; 
-    background: url('../res/img/news/news3.jpg') no-repeat center/ cover;
-  }
-  
-  .news4 { 
-    grid-area: news4;
-    background: url('../res/img/news/news4.jpg') no-repeat center/ cover;
-  }
-  
-  .news5 { 
-    grid-area: news5;
-    background: url('../res/img/news/news5.jpg') no-repeat center/ cover;
-  }
-  
-  .news6 { 
-    grid-area: news6;
-    background: url('../res/img/news/news6.jpg') no-repeat center/ cover;
-  }
 
   @include breakpoint(tablet) {
     padding: 0 15px;

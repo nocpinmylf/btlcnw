@@ -1,0 +1,89 @@
+@import "news";
+@import "vendor";
+
+
+#main {
+  padding: 3rem 0;
+  border-top: 2px solid $color1;
+  border-bottom: 2px solid $color1;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.section {
+  &-head {
+    @include flex(row, null, space-between);
+    padding: 0 1rem;
+
+    * {
+      display: block;
+      color: $color3;
+    }
+
+    &-title {
+      position: relative;
+      text-transform: uppercase;
+      font-size: $font-size * 2;
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: $color1;
+        top: 100%;
+      }
+    }
+
+    &-more {
+      font-size: 1.2rem;
+      background-color: $color1;
+      padding: 6px 10px;
+
+      &:hover {
+        color: white;
+        font-style: italic;
+      }
+    }
+  }
+
+  &-main {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &-news {
+    &-title {
+      padding: 10px 5px 0;
+      display: block;
+      color: $color3;
+      background: $color2-blur;
+
+      @include textCut(2);
+
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    &-head {
+      &-title {
+        width: 50%;
+        font-size: $font-size * 1.7;
+      }
+  
+      &-more {
+        font-size: $font-size;
+        padding: 7px 10px 8px;
+      }
+    }
+  }
+}

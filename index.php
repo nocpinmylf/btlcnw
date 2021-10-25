@@ -5,20 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PC Accessories</title>
-
-  <!-- link -->
-  <link rel="icon" type=“image/x-icon” href="res/img/icon.png">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- script -->
-  <script defer src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script defer src="js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-  <script defer src="js/font-awesome.js" crossorigin="anonymous"></script>
-  <script defer src="js/slick.js" crossorigin="anonymous"></script>
-  <script defer src="js/javascript.js"></script>
+  <?php require_once("head.php"); ?>
 </head>
 <body>
     <!-- header -->
@@ -48,7 +35,6 @@
       </div>
       
       <div class="section-main">
-        
         <?php
           ProductItem('item1.jpg', 'Bộ Vi Xử Lý Core i5', 'Core i5 9400 / 9M / 2.9GHz upto 4.1GHz / 6 nhân 6 luồng', 5, 139, 0);
           ProductItem('item2.jpg', 'Bộ Vi Xử Lý AMD', 'AMD Athlon™ 200GE 3.2GHz / 2 nhân 4 luồng / Radeon™ Vega 3 Graphics', 4, 99, 0);
