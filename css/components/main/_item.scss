@@ -1,7 +1,7 @@
 .item {
   position: relative;
   display: block;
-  width: 300px;
+  width: 25%;
   padding: 10px;
 
   .price {
@@ -31,6 +31,7 @@
       text-align: center;
       text-transform: uppercase;
       font-size: $font-size + 2;
+      margin-bottom: 15px;
     }
 
     .rate {
@@ -55,7 +56,7 @@
 
 @include breakpoint(tablet) {
   .item {
-    width: 250px;
+    min-width: 230px;
 
     span {
       h4 {
@@ -71,6 +72,7 @@
 
 @include breakpoint(small) {
   .item {
-    width: 180px;
+    width: 50%;
+    min-width: 150px;
   }
 }

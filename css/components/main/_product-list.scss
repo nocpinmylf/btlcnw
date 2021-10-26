@@ -1,11 +1,13 @@
 @import "price-range";
 
+@import "pagination";
+
 .product-list {
   padding: 3rem 0;
   min-height: 80vh;
   border-top: 2px solid $color1;
   border-bottom: 2px solid $color1;
-
+  
   .search-form {
     position: relative;
     label {
@@ -31,6 +33,10 @@
       
     }
 
+    select {
+      width: 100%;
+    }
+
     .selector {
       @include flex(row, center, space-around);
       width: 100%;
@@ -38,6 +44,12 @@
       &>* {
         width: 100%;
         margin: 10px 15px;
+      }
+
+      &-part>span {
+        display: block;
+        color: $color3;
+        margin-bottom: 10px;
       }
     }
   }
@@ -53,7 +65,7 @@
   .product-list {
     &-title {
       @include flex(column, center, center);
-      margin: 2em 0;
+      margin: 0;
   
       &>h3 {
         display: block;
@@ -63,10 +75,16 @@
       }
   
       .selector {
-        @include flex(row, flex-start, space-between);
-        
+        @include flex(column, flex-start, space-between);
+        padding: 15px;
+        margin: 0;
+
         &>* {
-          width: 100%;
+          margin: 10px 0;
+        }
+
+        &-part>span {
+          width: 20%;
         }
       }
     }
