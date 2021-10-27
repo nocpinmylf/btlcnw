@@ -16,6 +16,7 @@
         <li><a href="">Gaming Gear</a></li>
         <li><a href="">Tư Vấn</a></li>
         <li class="cart"><i class="fas fa-shopping-cart"></i><span class="number">0</span></li>
+        <li><?php include("search-form.php") ?></li>
       </ul>
     </nav>
   </div>

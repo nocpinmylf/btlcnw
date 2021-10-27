@@ -6,6 +6,72 @@
   width: 100%;
   z-index: 10;
 
+  &-list {
+    @include flex(row, center, center);
+
+    .search-form {
+      display: none;
+      
+      &-input {
+        padding: 10px 15px;
+      }
+  
+      label {
+        display: none;
+      }
+    }
+
+    li {
+      cursor: pointer;
+    }
+    
+    a {
+      display: block;
+      padding: 10px 20px;
+      color: $color3;
+      font-family: $font;
+      font-size: $font-size + 2;
+      text-align: center;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $color1;
+      }
+    }
+
+    svg {
+      margin: 0 20px; 
+      color: $color3;
+    }
+
+    @include breakpoint(tablet) {
+      @include flex(column, center, center);
+      position: relative;
+      height: auto;
+      order: 2;
+
+      .search-form {
+        display: flex;
+      }
+
+      &, li {
+        width: 100%;
+      }
+
+      svg {
+        display: block;
+        margin: 10px auto;
+
+      }
+
+      &>.cart {
+        display: none;
+        overflow: hidden;
+      }
+    }
+  }
+
   &.show {
     background-color: $color2-blur2;
   }
@@ -55,57 +121,13 @@
 
       * {
         display: none;
+        overflow: hidden;
+        opacity: 0;
       }
     }
   }
 }
 
 .header-nav-list {
-  @include flex(row, center, center);
-
-  li {
-    cursor: pointer;
-  }
   
-  a {
-    display: block;
-    padding: 10px 20px;
-    color: $color3;
-    font-family: $font;
-    font-size: $font-size + 2;
-    text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
-
-    &:hover {
-      color: $color1;
-    }
-  }
-
-  svg {
-    margin: 0 20px; 
-    color: $color3;
-  }
-
-  @include breakpoint(tablet) {
-    @include flex(column, center, center);
-    position: relative;
-    height: auto;
-    order: 2;
-
-    &, li {
-      width: 100%;
-    }
-
-    svg {
-      display: block;
-      margin: 10px auto;
-
-    }
-
-    &>.cart {
-      display: none;
-      overflow: hidden;
-    }
-  }
 }

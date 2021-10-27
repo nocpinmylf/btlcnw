@@ -44,8 +44,6 @@
   }
 
   @include breakpoint(tablet) {
-    width: 90%;
-
     input {
       height: 40px;
     }
@@ -57,7 +55,7 @@
     }
   
     &-input {
-      padding: 10px 15px 10px 35px;
+      padding: 10px 15px 10px 36px;
       font-size: $font-size + 3;
     }
   
@@ -75,16 +73,14 @@
     label {
       top: 18px;
       left: 18px;
-      font-size: $font-size;
+      font-size: $font-size - 3;
     }
   
     &-input {
-      padding: 10px 15px 10px 27px;
       font-size: $font-size;
     }
   
     &-submit {
-      min-width: 110px;
       font-size: $font-size;
     }
   }

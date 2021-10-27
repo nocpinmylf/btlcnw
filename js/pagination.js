@@ -118,11 +118,10 @@ var Pagination = {
 //-----Init-----
 var init = function () {
   Pagination.Init(document.getElementById('pagination'), {
-    size: 30, // pages size
+    size: 12, // pages size
     page: 1,  // selected page
     step: 3   // pages before and after current
   });
 };
 
 document.addEventListener('DOMContentLoaded', init, false);
-

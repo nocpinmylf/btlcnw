@@ -12,5 +12,4 @@
 <script defer src="js/jquery-ui.min.js" crossorigin="anonymous"></script>
 <script defer src="js/font-awesome.js" crossorigin="anonymous"></script>
 <script defer src="js/slick.js" crossorigin="anonymous"></script>
-<script defer src="js/pagination.js"></script>
 <script defer src="js/javascript.js"></script>

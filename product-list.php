@@ -7,6 +7,7 @@
 <!-- head -->
 <head>
   <?php require_once("head.php"); ?>
+  <script defer src="js/pagination.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -14,7 +15,7 @@
 
     <!-- main --> 
   <main id="product-list" class="wrap product-list">
-      <?php require_once('search-form.php'); ?>
+      <h1>Các Sản Phẩm Hiện Đang Bán</h1>
       <div class="product-list-title">
         <h3>Bộ Lọc</h3>
         <nav class="selector">
