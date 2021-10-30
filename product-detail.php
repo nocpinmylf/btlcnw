@@ -7,26 +7,44 @@
 <!-- head -->
 <head>
   <?php require_once("head.php"); ?>
-  <script defer src="js/product-detail.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header -->
   <?php include_once("header.php"); ?>
 
     <!-- main --> 
-  <main id="product-detail" class="product-detail wrap">
-    <div class="product-detail-title"></div>
+  <main id="product-info" class="wrap">
+    <span class="space"></span>
+    <span class="product-title">Ten sp</span>
+    <div id="product-detail" class="product-detail">
+      <!-- body -->
+      <div class="product-detail-body">
+        <div class="detail-slide">
+          <div id="big-img" class="detail-slide-img">
+          <div class="slBox"><img src="res/img/product/item1.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item2.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item3.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item4.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item1.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item2.jpg" alt=""></div>
+          </div>
+          <div id="small-slide" class="detail-slide-small">
+            <div class="slBox"><img src="res/img/product/item1.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item2.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item3.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item4.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item1.jpg" alt=""></div>
+            <div class="slBox"><img src="res/img/product/item2.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="detail-description"></div>
+      </div>
 
-    <!-- body -->
-    <div class="product-detail-body">
-      <div class="detail-slide"></div>
-      <div class="detail-description"></div>
-    </div>
-
-    <!-- privacy -->
-    <div class="product-detail-privacy">
-      <div class="privacy-gift"></div>
-      <div class="privacy-description"></div>
+      <!-- privacy -->
+      <div class="product-detail-privacy">
+        <div class="privacy-gift"></div>
+        <div class="privacy-description"></div>
+      </div>
     </div>
 
     <div class="more-items items-slide">

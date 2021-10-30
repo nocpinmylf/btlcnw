@@ -60,6 +60,32 @@ $(document).ready(() => {
     ]
   });
 
+  $('.detail-slide-small').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    asNavFor: '.detail-slide-img',
+    responsive: [{
+      breakpoint: 480,
+      settings: {
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }]
+  });
+
+  $('.detail-slide-img').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.detail-slide-small'
+  });
+
   //-----JS for Price Range slider-----
   $(() => {
     if (document.getElementsByTagName('main')[0].classList.contains('product-list')) {

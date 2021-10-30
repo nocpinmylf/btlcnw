@@ -1,5 +1,9 @@
 @mixin trans($s) {
   transition: all $s ease-in-out;
+  
+  &:hover {
+    transition: all $s ease-in-out;
+  }
 }
 
 @mixin flex($dir: row, $align: initial, $jtf: initial) {
@@ -25,6 +29,12 @@
 
   @if $point==tablet {
     @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $point==smallLap {
+    @media (max-width: 1024px) {
       @content;
     }
   }
