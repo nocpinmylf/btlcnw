@@ -7,6 +7,7 @@
 
   $sql = "SELECT * FROM product WHERE id = $id";
   $item = exec_select($sql)[0];
+  $info = explode('/', $item['description']);
 ?>
 
 <!DOCTYPE html>
@@ -46,19 +47,34 @@
         </div>
         <div class="detail-description">
           <span class="detail-description-price">$<?php echo $item['price']; ?></span>
-          <div class="detail-description-button">
-            <div class="quantity">
-              <label for="quantity-input">Số Lượng</label>
-              <div id="quantity-input" class="quantity-input">
-                <button id="quantity-sub" disabled>-</button>
-                <input type="text" name="quantity" id="quantity" value="1">
-                <button id="quantity-add">+</button>
-              </div>
+
+          <p class="rate">Đánh Giá: <?php echo GetStar($item["rate"]); ?></p>
+          <!-- Mo ta -->
+          <div class="detail-description-text">
+            <span class="detail-description-text-title">Mô Tả</span>
+            <ul>
+              <?php foreach($info as $i) { ?>
+              <li><i class="fas fa-check"></i> <?php echo $i ?></li>
+              <?php } ?>
+            </ul>
+          </div>
+
+          <!-- quantity -->
+          <div class="quantity">
+            <label for="quantity-input">Số Lượng</label>
+            <div id="quantity-input" class="quantity-input">
+              <button id="quantity-sub" disabled>-</button>
+              <input type="text" name="quantity" id="quantity" value="1">
+              <button id="quantity-add">+</button>
             </div>
+          </div>
+
+          <!-- Button group -->
+          <div class="detail-description-button">
             <button type="button" class="top">Thêm Vào Giỏ</button>
             <div class="bottom">
-              <button>Đặt Hàng</button>
-              <button>Trả Góp</button>
+              <button>Đặt Hàng Ngay</button>
+              <button>Trả Góp 0%</button>
             </div>
           </div>
         </div>

@@ -40,57 +40,6 @@
   }
 }
 
-.detail {
-  &-description {
-    display: block;
-    padding: 10px;
-    border: 1px solid $color1;
-
-    &-price {
-      color: $color3;
-      font-size: 30px;
-      font-weight: 900;
-    }
-  }
-}
-
-.quantity {
-  label {
-    color: $color3;
-  }
-
-  &-input {
-    @include flex(row, flex-start, flex-start);
-    margin-top: 15px;
-
-    button {
-      @include trans(.2s);
-      @include size(25px, 25px);
-      background-color: $color1;
-      color: $color3;
-      border: 0;
-      font-weight: 900;
-
-      &:hover {
-        background-color: $color1-blur;
-      }
-
-      &:disabled {
-        background-color: transparent;
-        color: transparent;
-        cursor: default;
-        user-select: none;
-      }
-    }
-
-    input {
-      @include size(50px, 25px);
-      border: 0;
-      text-align: center;
-    }
-  }
-}
-
 .product-title {
   @include trans(0.2s);
   display: flex;
