@@ -17,7 +17,42 @@ $(document).ready(() => {
       headerNav.classList.remove('show');
     }
   })
+  // Quantity
+  let min = 1;
+  let max = 99;
+  $('#quantity-sub').click(() => {
+    let num = parseInt($('#quantity').val());
+    if(num > min) num--;
+    else return;
+    if(num == min) $('#quantity-sub').prop('disabled', true);
+    if(num < max) $('#quantity-add').prop('disabled', false);
+    $('#quantity').val(num);
+  });
 
+  $('#quantity-add').click(() => {
+    let num = parseInt($('#quantity').val());
+    if(num < max) num++;
+    else return;
+    if(num == max) $('#quantity-add').prop('disabled', true);
+    if(num > min) $('#quantity-sub').prop('disabled', false);
+    $('#quantity').val(num);
+  });
+
+  $('#quantity').change(() => {
+    let num = parseInt($('#quantity').val());
+    if(num > max) {
+      num = max;
+      $('#quantity').val(max);
+    }
+    if(num < min) {
+      num = min; 
+      $('#quantity').val(min);
+    }
+    if(num == max) $('#quantity-add').prop('disabled', true);
+    if(num == min) $('#quantity-sub').prop('disabled', true);
+  });
+
+  // Slides
   $('.slick-carousel').slick({
     lazyLoad: 'ondemand',
     slidesToShow: 1,

@@ -6,10 +6,16 @@
   padding: 15vh 0;
   min-height: 80vh;
 
+  &>h1 {
+    color: $color3;
+  }
+
   &-title {
     @include flex(column, flex-start, space-between);
     margin: 2em 0;
-    border: 1px solid $color3-blur;
+    background-color: $color2-blur2;
+    padding: 10px;
+    border-radius: 10px;
 
     &>h3 {
       margin-left: 15px;

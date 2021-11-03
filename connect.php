@@ -17,16 +17,42 @@
   function close($link) {	
     mysqli_close($link);
   }
-  
-  function select_one($sql) {
-    $data = exec_select($sql);
-    if(!$data) return null;
-    return $data[0];
-  }
 
-  function select_list($sql) {
-    $data = exec_select($sql);
-    if(!$data) return null;
-    return $data;
+  function exec_select($sql) {
+    $link = connect();
+    $res = mysqli_query($link, $sql) ;
+    $row = array();
+    $err = mysqli_error($link); //Lay loi sau khi thuc hien truy van
+    
+    if($err) {  //kiem tra
+      print("Khong the select duoc");
+      logDebug("Khong the select duoc, ERROR=[" . $err . "]");
+      logDebug("COUNT=[0]");
+      return null;
+    }
+    
+    if($res) {  // Neu Khong co loi
+      while($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) $ret[] = $row;
+      mysqli_free_result($res);
+    }
+
+    close($link);
+    return $ret;
+  }
+  
+  function exec_update($sql) {
+    $link = connect();
+    // $res = mysqli_query($link, $sql) ;
+    // $row = array();
+    $err = mysqli_error($link); //Lay loi sau khi thuc hien truy van
+    
+    if($err) {  //kiem tra
+      print("Khong the update duoc, ERROR=[" . $err . "]" );
+      print("COUNT=[0]");
+      return -1;
+    }
+    $ret = mysqli_affected_rows($link);
+    close($link);
+    return $ret;
   }
 ?>

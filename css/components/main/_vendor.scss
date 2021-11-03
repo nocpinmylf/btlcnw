@@ -15,7 +15,7 @@
     }
 
     img {
-      transition: .2s;
+      @include trans(0.1s);
 
       &:hover {
         transform: scale(1.2);

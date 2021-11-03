@@ -3,8 +3,8 @@
     $star = GetStar($rate);
     $html = '
     <div class="item">
-      <a href="">
-        <img src="res/img/product/'.$imgpath.'" alt="Item Image" data="'.$id.'">
+      <a href="product-detail.php?id='.$id.'">
+        <img src="'.$imgpath.'" alt="Item Image">
         <span>
           <h4>'.$title.'</h4>
           <p>Mô tả ngắn: '.$des.'</p>

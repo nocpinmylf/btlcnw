@@ -4,7 +4,7 @@
   background-color: transparent;
   padding: .2rem 0; 
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 
   &-list {
     @include flex(row, center, center);
@@ -72,18 +72,15 @@
     }
   }
 
-  &.show {
-    background-color: $color2-blur2;
-  }
-
   &>.wrap {
     @include flex(row, center, space-between);
     padding: 5px 10px;
   }
 
-  &:hover {
-    background-color: $color2;
+  &.show, &:hover {
     @include trans(.2s);
+    background-color: $color2;
+    border-bottom: 2px solid $color1;
   }
 
   #collaspe-btn {
@@ -100,6 +97,7 @@
     // responsive
   @include breakpoint(tablet) {
     background-color: $color2;
+    border-bottom: 2px solid $color1;
     padding: 0;
 
     &>.wrap {
@@ -114,16 +112,7 @@
     }
 
     .hide {
-      @include trans(.2s);
-      display: none;
-      overflow: hidden;
-      opacity: 0;
-
-      * {
-        display: none;
-        overflow: hidden;
-        opacity: 0;
-      }
+      @include hideall(.2s);
     }
   }
 }
