@@ -9,7 +9,7 @@ $(document).ready(() => {
   });
 
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 150) {
+    if (window.pageYOffset > 50) {
       headerNav.classList.add('show');
     }
 

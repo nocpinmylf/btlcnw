@@ -12,6 +12,7 @@
 <head>
   <?php require_once("head.php"); ?>
   <script defer src="js/pagination.js"></script>
+  <title>Sản Phẩm</title>
 </head>
 <body>
     <!-- header -->

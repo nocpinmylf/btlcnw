@@ -40,12 +40,17 @@
     }
 
     button {
+      @include trans(0.1s);
       display: block;
       margin: 10px auto;
       padding: 10px 15px;
       background-color: $color1;
       color: $color3;
       border: 0;
+
+      &:hover {
+        background-color: $color1-blur;
+      }
     }
 
     &:hover {

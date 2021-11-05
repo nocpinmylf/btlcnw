@@ -72,7 +72,6 @@
     display: block;
     padding: 10px 30px;
     user-select: none;
-    // border: 1px solid $color1;
 
     &-price {
       color: $color3;
@@ -89,7 +88,7 @@
       &-title {
         display: block;
         border-radius: 10px 10px 0 0;
-        background-color: $color1;
+        background-color: $color1-blur;
         padding: 15px;
         text-transform: uppercase;
       }
@@ -129,6 +128,16 @@
           width: 50%;
         }
       }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &-description {
+      width: 100%;
+      min-width: 200px;
+      display: block;
+      padding: 10px 30px;
+      user-select: none;
     }
   }
 }

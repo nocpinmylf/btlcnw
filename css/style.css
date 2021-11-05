@@ -20405,7 +20405,7 @@ body {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #bb3232ce;
+  background-color: #b33030c0;
 }
 
 body::-webkit-scrollbar, body::-webkit-scrollbar-track {
@@ -21386,7 +21386,7 @@ section {
   color: #fff;
   width: 100%;
   font-size: 18px;
-  background-color: #bb3232ce;
+  background-color: #b33030c0;
 }
 
 .item span {
@@ -21431,12 +21431,23 @@ section {
 }
 
 .item span button {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   display: block;
   margin: 10px auto;
   padding: 10px 15px;
   background-color: #bb3232;
   color: #fff;
   border: 0;
+}
+
+.item span button:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.item span button:hover {
+  background-color: #b33030c0;
 }
 
 .item span:hover {
@@ -21498,7 +21509,7 @@ section {
 }
 
 .price-range-slider .range-bar {
-  border: 1px solid #bb3232ce;
+  border: 1px solid #b33030c0;
   background: #000;
   height: 5px;
 }
@@ -21569,7 +21580,7 @@ section {
 #pagination a.current {
   background-color: #bb3232;
   color: #fff;
-  border: 1px solid #bb3232ce;
+  border: 1px solid #b33030c0;
   -webkit-box-shadow: 0;
           box-shadow: 0;
 }
@@ -21855,7 +21866,7 @@ section {
 .detail-description-text-title {
   display: block;
   border-radius: 10px 10px 0 0;
-  background-color: #bb3232;
+  background-color: #b33030c0;
   padding: 15px;
   text-transform: uppercase;
 }
@@ -21890,7 +21901,7 @@ section {
 }
 
 .detail-description-button button:hover {
-  background-color: #bb3232ce;
+  background-color: #b33030c0;
 }
 
 .detail-description-button .bottom {
@@ -21902,6 +21913,19 @@ section {
 .detail-description-button .bottom > button {
   display: inline-block;
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .detail-description {
+    width: 100%;
+    min-width: 200px;
+    display: block;
+    padding: 10px 30px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
 }
 
 .quantity label {
@@ -21942,7 +21966,7 @@ section {
 }
 
 .quantity-input button:hover {
-  background-color: #bb3232ce;
+  background-color: #b33030c0;
 }
 
 .quantity-input button:disabled {
@@ -21977,15 +22001,14 @@ section {
 
 .product-detail {
   padding: 1.5em 0;
-  min-height: 80vh;
   overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (3)[1fr];
       grid-template-columns: repeat(1fr, 3);
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  gap: 0px;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 15px;
       grid-template-areas: "body body body" "privacy privacy privacy";
 }
 
@@ -22010,6 +22033,19 @@ section {
 }
 
 .product-detail-privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -22032,6 +22068,21 @@ section {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .product-detail-privacy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
 }
 
 .product-title {
@@ -22041,7 +22092,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   padding: 15px 20px;
-  background: #bb3232ce;
+  background: #b33030c0;
   width: 100%;
   color: #fff;
   text-transform: uppercase;
@@ -22071,6 +22122,46 @@ section {
   }
 }
 
+.privacy-gift, .privacy-description {
+  display: block;
+  min-width: 40%;
+}
+
+.privacy-gift *, .privacy-description * {
+  color: #fff;
+}
+
+.privacy-gift-title, .privacy-description-title {
+  display: block;
+  background-color: #b33030c0;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.privacy-gift-list, .privacy-description-list {
+  padding: 15px;
+  background-color: #464242;
+}
+
+.privacy-gift-list-item, .privacy-description-list-item {
+  margin: 10px 0;
+}
+
+.privacy-gift {
+  margin: 10px 10px 10px 0;
+}
+
+.privacy-description {
+  margin: 10px 0 10px 10px;
+}
+
+@media (max-width: 768px) {
+  .privacy-gift, .privacy-description {
+    width: 100%;
+    margin: 15px;
+  }
+}
+
 .more-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22090,5 +22181,81 @@ section {
       align-content: space-between;
   overflow: hidden;
   margin-bottom: 1.5em;
+}
+
+.login-body {
+  margin: 0;
+  padding: 0;
+  background-color: #2a2a2a;
+  height: 100vh;
+}
+
+.login-body .form-group {
+  margin-top: 15px;
+}
+
+.login-body .form-group input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+.login-body .form-group .form-control {
+  color: #2a2a2a;
+}
+
+.login-body label.text, .login-body * {
+  color: #fff;
+}
+
+.login-body .btn {
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2 ease-in-out;
+  background-color: #bb3232;
+  border: #b33030c0;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.login-body .btn:hover {
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2 ease-in-out;
+}
+
+.login-body .btn:hover {
+  background-color: #b33030c0;
+  color: #fff;
+}
+
+.login-body .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  -webkit-box-shadow: 1px #464242;
+          box-shadow: 1px #464242;
+  background-color: #464242;
+}
+
+#login-form {
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

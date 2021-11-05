@@ -1,0 +1,53 @@
+.login-body {
+  margin: 0;
+  padding: 0;
+  background-color: $color2;
+  height: 100vh;
+
+  .form-group {
+    margin-top: 15px;
+
+    input[type="checkbox"] {
+      vertical-align: middle;
+    }
+
+    .form-control {
+      color: $color2;
+    }
+  }
+
+  label.text, * {
+    color: $color3;
+  }
+
+  .btn {
+    @include trans(0.2);
+    background-color: $color1;
+    border: $color1-blur;
+    color: $color3;
+    text-transform: uppercase;
+    margin-top: 15px;
+    user-select: none;
+
+    &:hover {
+      background-color: $color1-blur;
+      color: $color3;
+    }
+  }
+
+  .button-group {
+    @include flex(column, center, center);
+  }
+}
+
+#login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  box-shadow: 1px $color2-blur2;
+  background-color: $color2-blur2;
+}
+
+#login-form {
+  padding: 20px;
+}

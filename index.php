@@ -16,6 +16,7 @@
 <html lang="en">
 <head>
   <?php require_once("head.php"); ?>
+  <title>PC Accessories</title>
 </head>
 <body>
     <!-- header -->
