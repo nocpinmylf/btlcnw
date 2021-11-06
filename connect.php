@@ -7,6 +7,8 @@
     $host = 'localhost';
     $username = 'root';
     $password = '';
+
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $link = mysqli_connect($host, $username, $password);
     
     if(!$link) die('<br/>Khong ket noi duoc: ' . mysqli_connect_error());
@@ -75,17 +77,26 @@
   //--------------------------------
   function exec_update($sql) {
     $link = connect();
-    // $res = mysqli_query($link, $sql) ;
-    // $row = array();
     $err = mysqli_error($link); //Lay loi sau khi thuc hien truy van
-    
+    mysqli_query($link, $sql); // thuc hien cau lenh
+
     if($err) {  //kiem tra
-      print("Khong the update duoc, ERROR=[" . $err . "]" );
+      print("Khong the thuc hien cau lenh duoc, ERROR=[" . $err . "]" );
       print("COUNT=[0]");
       return -1;
     }
+    
     $ret = mysqli_affected_rows($link);
     close($link);
     return $ret;
+  }
+
+
+  function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
   }
 ?>

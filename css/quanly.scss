@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+@import "vendor/all";
+
+@import "base/all";
+
+.quanly {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    @include trans(.2s);
+    display: block;
+    background-color: $color2-blur2;
+    padding: .5rem 0; 
+    width: 100%;
+    z-index: 100;
+    
+    &-button {
+      @include flex(row, center, flex-end);
+      margin-right: 15px;
+
+      &>span {
+        display: block;
+        padding: 10px 15px;
+        margin-right: 20px;
+        color: $color3;
+        font-size: $font-size;
+      }
+
+      &>a {
+        @include trans(.2s);
+        display: block;
+        padding: 10px 15px;
+        color: $color3;
+        background-color: $color1;
+        user-select: none;
+        
+        &:hover {
+          background-color: $color1-blur;
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding: 25px 0;
+
+    &-chucnang {
+      @include flex(row, center, space-between);
+      flex-wrap: wrap;
+
+      &-btn {
+        @include trans(.2s);
+        display: block;
+        min-width: 30%;
+        background-color: $color1;
+        color: $color3;
+        padding: 10px 15px;
+        border: 0;
+        user-select: none;
+
+        &:hover {
+          background-color: $color1-blur;
+        }
+
+        &[method="get"] {
+          @include flex(row, center, space-between);
+          flex-wrap: nowrap;
+          padding: 0;
+
+          &:hover {
+            background-color: $color1;
+          }
+
+          button {
+            @include trans(.2s);
+            display: block;
+            border: 0;
+            background-color: $color1;
+            color: $color3;
+            min-width: 100px;
+            z-index: 1;
+
+            &:hover {
+              background-color: $color1-blur;
+            }
+          }
+
+          input[type="text"] {
+            background-color: $color3;
+            color: $color2;
+            width: 100%;
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+
+    &-dulieu {
+      @include flex(column, stretch, flex-start);
+      width: 100%;
+      margin-top: 15px;
+      background-color: $color2-blur2;
+    }
+
+    .item {
+      @include flex(row, center, space-between);
+      overflow: hidden auto;
+      padding: 7px 10px;
+      box-shadow: rgba(122, 125, 128, 0.308) 0px 1px 2px 0px, rgba(102, 102, 102, 0.15) 0px 1px 3px 1px;
+
+      &-img {
+        display: block;
+        object-fit: cover;
+        width: 15%;
+
+        &>img {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        display: block;
+        width: 70%;
+        text-align: start;
+        color: $color3;
+        margin: 0 10px;
+        font-size: $font-size + 5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        &-id, &-categ {
+          padding: 5px 10px;
+          font-size: 13px;
+          border-radius: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+
+        &-id {
+          background-color: rgb(10, 156, 30)
+        }
+
+        &-categ {
+          background-color: rgb(32, 10, 156)
+        }
+      }
+
+      &-group {
+        @include flex(row, center, space-around);
+        width: 15%;
+
+        &-btn {
+          @include trans(0.2s);
+          display: block;
+          padding: 12px 15px;
+          border-radius: 50%;
+          color: $color3;
+          background-color: $color1;
+
+          &:hover {
+            background-color: $color1-blur;
+          }
+        }
+      }
+    }
+  }
+
+  &-footer {
+    display: block;
+    margin-top: auto;
+    background-color: $color2-blur2;
+    padding: .5rem 0; 
+    width: 100%;
+    z-index: 100;
+
+    .copyright {
+      text-align: center;
+      display: block;
+      margin: auto;
+      color: $color3;
+      user-select: none;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &-body {
+      .item {
+        &-img {
+          width: 20%;
+        }
+  
+        &-title {
+          width: 60%;
+          font-size: $font-size;
+        }
+  
+        &-group {
+          width: 20%;
+
+          &-btn {
+            font-size: $font-size;
+            padding: 10px 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    &-body {
+      .item {
+        padding: 7px 10px;
+
+        &-title {
+          font-size: $font-size - 3;
+
+          &-id, &-categ {
+            padding: 5px 10px;
+            font-size: 10px;
+          }
+        }
+  
+        &-group {
+          &-btn {
+            font-size: $font-size - 3;
+            padding: 7px 9px;
+          }
+        }
+      }
+    }
+  }
+}

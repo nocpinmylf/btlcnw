@@ -1,6 +1,10 @@
 <?php 
   include(__DIR__."\connect.php");
 
+  if(isset($_COOKIE['user']) && isset($_COOKIE['isLogin'])) {
+    header("location: quanly.php");
+  }
+
   $username = isset($_POST["username"]) ? $_POST["username"] : "";
   $password = isset($_POST["password"]) ? $_POST["password"] : "";
   $remember = isset($_POST["remember-me"]) ? $_POST["remember-me"] : null;

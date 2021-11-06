@@ -7,7 +7,7 @@
 
   $sql = "SELECT * FROM product WHERE id = $id";
   $item = select_once($sql);
-  $info = explode('/', $item['description']);
+  $info = explode('|', $item['description']);
 
   // Chọn ngẫu nhiên 5 product trong database
   $sql = "SELECT * FROM product ORDER BY RAND() LIMIT 5";

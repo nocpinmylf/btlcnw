@@ -2,13 +2,13 @@
   include(__DIR__."\product-item.php");
   include(__DIR__."\connect.php");
 
-  $sql = "SELECT * FROM product WHERE rate = 5 LIMIT 10";
+  $sql = "SELECT * FROM `product` WHERE rate = 5 LIMIT 10";
   $hotdeal = exec_select($sql);
 
-  $sql = "SELECT * FROM product WHERE (cid > 1 AND cid < 10) LIMIT 10";
+  $sql = "SELECT * FROM `product` WHERE (cid > 1 AND cid < 10) LIMIT 10";
   $gamingGear = exec_select($sql);
 
-  $sql = "SELECT * FROM product WHERE cid = 10 LIMIT 10";
+  $sql = "SELECT * FROM `product` WHERE cid = 10 LIMIT 10";
   $otherThings = exec_select($sql);
 ?>
 
