@@ -2,9 +2,46 @@
   include_once(__DIR__."\connect.php");
   include_once(__DIR__."\manage-item.php");
 
+  // Check Login
   if(!isset($_COOKIE['user']) && !isset($_COOKIE['isLogin'])) {
     header("location: login.php");
   }
+
+  // Insert Product
+  if( isset($_REQUEST["category"])&&
+      isset($_REQUEST["tensp"])&&
+      isset($_REQUEST["description"])&&
+      isset($_REQUEST["price"])) {   
+        $insertSQL = "INSERT INTO `product` (`cid`, `name`, `description`, `price`, `imgpath`)
+                      VALUES ('".$_REQUEST["category"]."', '".$_REQUEST["tensp"]."', '".$_REQUEST["description"]."', '".$_REQUEST["price"]."', '".$_REQUEST["imgpath"]."');";
+        try {
+          exec_update($insertSQL);
+        } catch (\Throwable $th) {
+          throw $th;
+        } finally {
+          unset($_REQUEST["category"]);
+          unset($_REQUEST["tensp"]);
+          unset($_REQUEST["description"]);
+          unset($_REQUEST["price"]);
+          unset($_REQUEST["imgpath"]);
+
+          header("location: quanly.php");
+        }
+      }
+  
+  // Insert Category
+  if(isset($_REQUEST["tenhangmoi"])) {   
+    $insertSQL = "INSERT INTO `category` (`name`) VALUES ('".$_REQUEST["tenhangmoi"]."')";
+    try {
+      exec_update($insertSQL);
+    } catch (\Throwable $th) {
+      throw $th;
+    } finally {
+      unset($_REQUEST["tenhangmoi"]);
+      header("location: quanly.php");
+    }
+  }
+
   $sql = "SELECT * FROM `product`";
   // $all = exec_select($sql);
 
@@ -45,11 +82,10 @@
   </header>
 
   <main class="quanly-body">
-    <span><?php echo $sql; ?></span>
     <div class="wrap">
       <div class="quanly-body-chucnang">
-        <button class="quanly-body-chucnang-btn">Thêm Sản Phẩm</button>
-        <button class="quanly-body-chucnang-btn">Thêm Loại</button>
+        <a href="updatesp.php" class="quanly-body-chucnang-btn">Thêm Sản Phẩm</a>
+        <a href="updateloai.php" class="quanly-body-chucnang-btn">Thêm Loại</a>
         <form class="quanly-body-chucnang-btn" id="timkiemForm" method="get">
           <input type="text" name="timkiem" id="timkiem" placeholder="Tên sản phẩm">
           <button type="submit">Tìm</button>

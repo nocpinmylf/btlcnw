@@ -14,7 +14,7 @@
         <p>$'.$price.'</p>
       </div>
       <form class="item-group" mothod="POST" action="quanly.php">
-        <button class="item-group-btn sua" type="button"><i class="fas fa-edit"></i></button>
+        <button class="item-group-btn sua" type="button" id="'.$id.'"><i class="fas fa-edit"></i></button>
         <button class="item-group-btn xoa" type="submit" id="'.$id.'"><i class="fas fa-trash-alt"></i></button>
       </form>
     </div>';
@@ -29,7 +29,6 @@
   function DeleteItem($id) {
     if($id == null) return;
     $sql = "DELETE FROM `product` WHERE `id` = $id";
-    print_r($sql);
 
     try {
       exec_update($sql);
