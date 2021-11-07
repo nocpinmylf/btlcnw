@@ -3,6 +3,13 @@
   include(__DIR__."\connect.php");
 
   $sql = "SELECT * FROM product";
+
+  if(isset($_REQUEST["keyword"])) {
+    $condition = " WHERE `name` LIKE '%".$_REQUEST["keyword"]."%' LIMIT 10";
+    $sql .= $condition;
+    unset($_REQUEST["keyword"]);
+  }
+
   $all = exec_select($sql);
 ?>
 
@@ -21,7 +28,7 @@
     <!-- main --> 
   <main id="product-list" class="wrap product-list">
       <h1>Các Sản Phẩm Hiện Đang Bán</h1>
-      
+      <?php include("search-form.php"); ?>
       <div class="product-list-title">
         <h3>Bộ Lọc</h3>
         <nav class="selector">
