@@ -13,10 +13,10 @@
         <p>'.$title.'</p>
         <p>$'.$price.'</p>
       </div>
-      <form class="item-group" mothod="POST" action="quanly.php">
-        <button class="item-group-btn sua" type="button" id="'.$id.'"><i class="fas fa-edit"></i></button>
-        <button class="item-group-btn xoa" type="submit" id="'.$id.'"><i class="fas fa-trash-alt"></i></button>
-      </form>
+      <div class="item-group">
+        <form class="formsua" method="POST" action="updatesp.php"><button class="item-group-btn sua" type="submit" name="uid" value="'.$id.'"><i class="fas fa-edit"></i></button></form>
+        <form class="formxoa" method="POST" action="quanly.php"><button class="item-group-btn xoa" type="submit" id="'.$id.'"><i class="fas fa-trash-alt"></i></button></form>
+      </div>
     </div>';
     echo $html;
   }

@@ -5,11 +5,31 @@
   if(!isset($_COOKIE['user']) && !isset($_COOKIE['isLogin'])) {
     header("location: login.php");
   }
-  $sql = "SELECT * FROM `product`";
-  $all = exec_select($sql);
+
+  if(isset($_REQUEST["uid"])) {
+    $sql = "SELECT * FROM `product` WHERE `id` = '".$_REQUEST["uid"]."';";
+    $all = select_once($sql);
+
+    $cid = $all['cid'];
+    $name = $all['name'];
+    $description = $all['description'];
+    $price = $all['price'];
+    $url = $all['imgpath'];
+  }
+  else {
+    $sql = "SELECT * FROM `product`";
+    $all = exec_select($sql);
+
+    $cid = "";
+    $name = "";
+    $description = "";
+    $price = "";
+    $url = "";
+  }
 
   $sql = "SELECT * FROM `category`";
   $category = exec_select($sql);
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +69,7 @@
                 <?php
                   foreach($category as $data) {
                 ?>
-                <option value="<?php echo $data["id"]; ?>"><?php echo $data["name"]; ?></option>
+                <option value="<?php echo $data["id"]; ?>" <?php if($cid == $data["id"]) echo "selected"; ?>><?php echo $data["name"]; ?></option>
                 
                 <?php
                   }
@@ -59,26 +79,41 @@
           </tr>
           <tr>
             <td>Tên</td>
-            <td><input type="text" name="tensp" id="tensp" required></td>
+            <td><input type="text" name="tensp" id="tensp" value="<?php echo $name; ?>" required></td>
           </tr>
           <tr>
             <td>Mô Tả</td>
-            <td><input type="text" name="description" id="description" required></td>
+            <td><input type="text" name="description" id="description" value="<?php echo $description; ?>" required></td>
           </tr>
           <tr>
             <td>Giá</td>
-            <td><input type="number" name="price" id="price" min="1" required></td>
+            <td><input type="number" name="price" id="price" value="<?php echo $price; ?>" min="1" required></td>
           </tr>
           <tr>
             <td>Link Ảnh</td>
-            <td><input type="url" name="imgpath" id="imgpath"></td>
+            <td><input type="url" name="imgpath" id="imgpath" value="<?php echo $url; ?>"></td>
           </tr>
+
+          <?php 
+            if(isset($_REQUEST["uid"])) {
+              $star = $all['rate'];
+          ?>
+            <tr>
+              <td>Xếp Hạng</td>
+              <td><input type="number" name="rate" id="rate" min="0" max="5" value="<?php echo $star; ?>"></td>
+            </tr>
+          <?php } ?>
         </table>
         <div class="update-group">
-          <button type="submit">Thêm</button>
-          <a href="quanly.php">Quay Lại</a>
+        <?php 
+          if(isset($_REQUEST["uid"])) {
+        ?>
+          <button type="submit" name="uid" value="<?php echo $_REQUEST["uid"]; ?>">Cập Nhật</button>
+        <?php } else { ?>
+          <button type="submit" name="insert" value="1">Thêm</button>
+        <?php } ?>
+        <a href="quanly.php">Quay Lại</a>
         </div>
-        
       </form>
     </div>
   </main>

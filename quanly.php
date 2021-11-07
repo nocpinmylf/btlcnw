@@ -6,9 +6,32 @@
   if(!isset($_COOKIE['user']) && !isset($_COOKIE['isLogin'])) {
     header("location: login.php");
   }
+  $updateSQL ="";
+  // Update Product
+  if(isset($_REQUEST["uid"])) {
+    $updateSQL = "UPDATE `product` SET `cid` = '".$_REQUEST["category"]."', `name` = '".$_REQUEST["tensp"]."', `description` = '".$_REQUEST["description"]."', `price` = '".$_REQUEST["price"]."', `imgpath` = '".$_REQUEST["imgpath"]."',  `rate` = '".$_REQUEST["rate"]."' WHERE `product`.`id` = '".$_REQUEST["uid"]."'";
+    
+    try {
+      exec_update($updateSQL);
+    } catch (\Throwable $th) {
+      throw $th;
+    } finally {
+      print_r($updateSQL);
+      unset($_REQUEST["category"]);
+      unset($_REQUEST["tensp"]);
+      unset($_REQUEST["description"]);
+      unset($_REQUEST["price"]);
+      unset($_REQUEST["imgpath"]);
+      unset($_REQUEST["uid"]);
+      unset($_REQUEST["rate"]);
+
+      header("location: quanly.php");
+    }
+  }
 
   // Insert Product
-  if( isset($_REQUEST["category"])&&
+  if( isset($_REQUEST["insert"])&&
+      isset($_REQUEST["category"])&&
       isset($_REQUEST["tensp"])&&
       isset($_REQUEST["description"])&&
       isset($_REQUEST["price"])) {   

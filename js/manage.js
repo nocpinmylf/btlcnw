@@ -11,7 +11,7 @@ $(document).ready(() => {
 
 
   // Xoa
-  $('.item-group').on('submit', (event) => {
+  $('.formxoa').on('submit', (event) => {
     event.preventDefault();
 
     // Abort any pending request
