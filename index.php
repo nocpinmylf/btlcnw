@@ -91,12 +91,16 @@
       </div>
       <div class="section-main">
         <ul>
-          <li><a href="https://www.nvidia.com/vi-vn/geforce/geforce-experience/"><img src="res/img/hang1.jpg" alt=""></a></li>
-          <li><a href="https://vn.msi.com/"><img src="res/img/hang2.png" alt=""></a></li>
-          <li><a href="https://www.logitech.com/vi-vn"><img src="res/img/hang3.jpg" alt=""></a></li>
-          <li><a href="http://www.kingmax.com.tw/en-global/home/index"><img src="res/img/hang4.jpg" alt=""></a></li>
-          <li><a href="https://www.kingston.com/vn"><img src="res/img/hang5.jpg" alt=""></a></li>
-          <li><a href="https://www.intel.vn/content/www/vn/vi/homepage.html"><img src="res/img/hang6.jpg" alt=""></a></li>
+          <div>
+            <li><a href="https://www.nvidia.com/vi-vn/geforce/geforce-experience/"><img src="res/img/hang1.jpg" alt=""></a></li>
+            <li><a href="https://vn.msi.com/"><img src="res/img/hang2.png" alt=""></a></li>
+            <li><a href="https://www.logitech.com/vi-vn"><img src="res/img/hang3.jpg" alt=""></a></li>
+          </div>
+          <div>
+            <li><a href="http://www.kingmax.com.tw/en-global/home/index"><img src="res/img/hang4.jpg" alt=""></a></li>
+            <li><a href="https://www.kingston.com/vn"><img src="res/img/hang5.jpg" alt=""></a></li>
+            <li><a href="https://www.intel.vn/content/www/vn/vi/homepage.html"><img src="res/img/hang6.jpg" alt=""></a></li>
+          </div>
         </ul>
       </div>
     </div>

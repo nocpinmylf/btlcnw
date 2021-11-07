@@ -74,7 +74,6 @@
     unset($_POST);
   }
 
-  //$sqlSearch = "SELECT * FROM `product`";
   if(isset($_REQUEST["timkiem"])) {
     $condition = "WHERE `name` LIKE '%".$_REQUEST["timkiem"]."%' LIMIT 10";
     $sql .= $condition;

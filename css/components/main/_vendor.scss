@@ -6,7 +6,13 @@
     background-color: $color3;
     overflow: hidden;
 
-    &>li {
+    &>div {
+      @include flex(row, center, space-between);
+      background-color: $color3;
+      overflow: hidden;
+    }
+
+    & li {
       z-index: 0;
 
       &:hover {
@@ -19,6 +25,20 @@
 
       &:hover {
         transform: scale(1.2);
+      }
+    }
+  }
+  
+
+  @include breakpoint(tablet) {
+    ul {
+      @include flex(column, center, space-between);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      overflow: hidden;
+  
+      &>div {
+        @include flex(row, center, space-between);
       }
     }
   }
