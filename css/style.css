@@ -21378,6 +21378,8 @@ section {
   width: 25%;
   max-width: 300px;
   padding: 10px;
+  -webkit-box-shadow: rgba(28, 33, 39, 0.4) 0px 0px 0px 2px, rgba(53, 47, 46, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+          box-shadow: rgba(28, 33, 39, 0.4) 0px 0px 0px 2px, rgba(53, 47, 46, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .item .price {
@@ -21387,6 +21389,10 @@ section {
   width: 100%;
   font-size: 18px;
   background-color: #b33030c0;
+}
+
+.item-img {
+  height: 290px;
 }
 
 .item span {
@@ -21458,6 +21464,9 @@ section {
   .item {
     min-width: 230px;
   }
+  .item-img {
+    height: 240px;
+  }
   .item span h4 {
     font-size: 15px;
   }
@@ -21467,6 +21476,9 @@ section {
   .item {
     width: 50%;
     min-width: 150px;
+  }
+  .item-img {
+    height: 210px;
   }
 }
 

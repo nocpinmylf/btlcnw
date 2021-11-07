@@ -8,6 +8,7 @@
   width: 25%;
   max-width: 300px;
   padding: 10px;
+  box-shadow: rgba(28, 33, 39, 0.4) 0px 0px 0px 2px, rgba(53, 47, 46, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
   .price {
     text-align: center;
@@ -17,6 +18,11 @@
     font-size: $font-size + 3;
     background-color: $color1-blur;
   }
+
+  &-img {
+    height: 290px;
+  }
+  
 
   span {
     @include size(100%, 100%);
@@ -63,6 +69,10 @@
   .item {
     min-width: 230px;
 
+    &-img {
+      height: 240px;
+    }
+
     span {
       h4 {
         font-size: $font-size;
@@ -75,5 +85,9 @@
   .item {
     width: 50%;
     min-width: 150px;
+
+    &-img {
+      height: 210px;
+    }
   }
 }
