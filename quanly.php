@@ -3,7 +3,7 @@
   include_once(__DIR__."\manage-item.php");
 
   // Check Login
-  if(!isset($_COOKIE['user']) && !isset($_COOKIE['isLogin'])) {
+  if(!isset($_COOKIE['user']) || !isset($_COOKIE['isLogin'])) {
     header("location: login.php");
   }
   $updateSQL ="";

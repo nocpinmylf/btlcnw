@@ -18,7 +18,10 @@
 
     return $link;
   }
-  
+
+  //--------------------------------
+  //--- Close Connection
+  //--------------------------------
   function close($link) {	
     mysqli_close($link);
   }
