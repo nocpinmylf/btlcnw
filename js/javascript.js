@@ -17,6 +17,7 @@ $(document).ready(() => {
       headerNav.classList.remove('show');
     }
   })
+  
   // Quantity
   let min = 1;
   let max = 99;

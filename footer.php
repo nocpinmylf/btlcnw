@@ -15,7 +15,7 @@
           <li><a href="">Hỏi đáp</a></li>
           <li><a href="">Hướng dẫn mua hàng</a></li>
           <li><a href="">Góp ý, khiếu nại</a></li>
-          <li><a href="">Yêu cầu đặc biệt</a></li>
+          <li><a href="quanly.php">Quản lý</a></li>
         </ul>
       </section>
 
