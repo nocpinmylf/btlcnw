@@ -97,6 +97,7 @@
     <div class="wrap">
       <div class="quanly-header-button wrap">
         <span>Xin Chào <?php echo $_COOKIE['user']; ?></span>
+        <a href="index.php">Trang Chủ</a>
         <a href="logout.php">Đăng Xuất</a>
       </div>
     </div>
