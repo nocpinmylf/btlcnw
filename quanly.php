@@ -16,7 +16,6 @@
     } catch (\Throwable $th) {
       throw $th;
     } finally {
-      print_r($updateSQL);
       unset($_REQUEST["category"]);
       unset($_REQUEST["tensp"]);
       unset($_REQUEST["description"]);
