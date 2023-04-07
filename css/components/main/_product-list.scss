@@ -49,7 +49,7 @@
   }
 
   &-body {
-    @include flex(row, center, space-around);
+    @include flex(row, center, flex-start);
     flex-wrap: wrap;
     align-content: space-between;
   }

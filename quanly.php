@@ -16,7 +16,6 @@
     } catch (\Throwable $th) {
       throw $th;
     } finally {
-      print_r($updateSQL);
       unset($_REQUEST["category"]);
       unset($_REQUEST["tensp"]);
       unset($_REQUEST["description"]);
@@ -98,6 +97,7 @@
     <div class="wrap">
       <div class="quanly-header-button wrap">
         <span>Xin Chào <?php echo $_COOKIE['user']; ?></span>
+        <a href="index.php">Trang Chủ</a>
         <a href="logout.php">Đăng Xuất</a>
       </div>
     </div>

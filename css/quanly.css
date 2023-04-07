@@ -19202,6 +19202,7 @@ section {
   transition: all 0.2s ease-in-out;
   display: block;
   padding: 10px 15px;
+  margin-left: 10px;
   color: #fff;
   background-color: #bb3232;
   -webkit-user-select: none;
