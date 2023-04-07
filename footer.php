@@ -3,10 +3,10 @@
     <!-- info nav -->
     <div class="info-col">
       <section>
-        <div class="logo"><a href="index.html" id="logo"><span class="word-l">Top</span><span class="word-r">GEAR</span></a></div>
-        <p>Là đơn vị chuyên phân phối các sản phẩm linh máy tính, đồ chơi công nghệ và cũng là đơn vị chuyên cung cấp dịch vụ bảo hành và nâng cấp máy tính. Uy tín và tâm huyết luôn được đặt lên hàng đầu.</p>
+        <div class="logo"><a href="index.html" id="logo"><span class="word-l">Top</span><span class="word-r">MARKET</span></a></div>
+        <p>Doanh nghiệp chuyên phân phối các sản phẩm tạp hoá, đồ dùng gia đình. Uy tín và tâm huyết luôn được đặt lên hàng đầu.</p>
         <address><i class="fas fa-map-marker-alt"></i> Địa chỉ: Hà Nội</address>
-        <p class="copyright">© 2021 Copyright</p>
+        <p class="copyright">© 2022 Copyright</p>
       </section>
 
       <section>
@@ -34,7 +34,7 @@
         <ul class="contact">
           <li><a href=""><i class="fas fa-map-marked"></i> Bản đồ</a></li>
           <li><a href="tel:+19001003" class="phone"><i class="fas fa-phone"></i> Tổng đài: 19001003</a></li>
-          <li><a href="mailto:"><i class="fas fa-envelope"></i> cskh@topgear.com.vn</a></li>
+          <li><a href="mailto:"><i class="fas fa-envelope"></i> cskh@topmarket.com.vn</a></li>
           <li><a href="tel:+84327701953" class="phone"><i class="fas fa-phone"></i> Hotline: 0327701953</a></li>
           <form class="contact-register">
             <input type="email" name="contact-email" id="contact-email" placeholder="Email">

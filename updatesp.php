@@ -118,7 +118,7 @@
     </div>
   </main>
 
-  <footer class="quanly-footer"><p class="copyright wrap">© 2021 Copyright</p></footer>
+  <footer class="quanly-footer"><p class="copyright wrap">© 2022 Copyright</p></footer>
   
 </body>
 </html>

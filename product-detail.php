@@ -92,7 +92,7 @@
           <ul class="privacy-gift-list">
             <li class="privacy-gift-list-item"><i class="fas fa-gift"></i> Miễn Phí Vận Chuyển</li>
             <li class="privacy-gift-list-item"><i class="fas fa-gift"></i> Giảm Ngay 5% Cho Hóa Đơn Trên 1 Triệu Đồng</li>
-            <li class="privacy-gift-list-item"><i class="fas fa-gift"></i> Trợ Giá 100.000đ Khi Mua Kèm Tai Nghe</li>
+            <li class="privacy-gift-list-item"><i class="fas fa-gift"></i> Trợ Giá 100.000đ Khi Nồi Chiên Không Dầu</li>
           </ul>
         </div>
         <div class="privacy-description">

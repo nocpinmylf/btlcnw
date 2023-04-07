@@ -16,7 +16,7 @@
 <html lang="en">
 <head>
   <?php require_once("head.php"); ?>
-  <title>PC Accessories</title>
+  <title>Grocery Online</title>
 </head>
 <body>
     <!-- header -->
@@ -29,7 +29,7 @@
       <!-- news section -->
       <div class="section wrap">
         <div class="section-head">
-          <span class="section-head-title">News</span>
+          <span class="section-head-title">Tin tức</span>
         </div>
         <div class="section-news wrap">
           <?php 
@@ -54,10 +54,10 @@
       </div>
     </div>
 
-      <!-- Gaming gear -->
+      <!-- Bán chạy -->
     <div class="section wrap">
       <div class="section-head">
-        <span class="section-head-title">Gaming Gear</span>
+        <span class="section-head-title">Bán chạy</span>
         <a href="" class="section-head-more">Xem Thêm >></a>
       </div>
       <div class="section-main items-slide">
@@ -72,7 +72,7 @@
       <!-- Phụ Kiện Khác -->
     <div class="section wrap">
       <div class="section-head">
-        <span class="section-head-title">Phụ Kiện Khác</span>
+        <span class="section-head-title">Khác</span>
         <a href="" class="section-head-more">Xem Thêm >></a>
       </div>
       <div class="section-main  items-slide">
@@ -92,14 +92,14 @@
       <div class="section-main">
         <ul>
           <div>
-            <li><a href="https://www.nvidia.com/vi-vn/geforce/geforce-experience/"><img src="res/img/hang1.jpg" alt=""></a></li>
-            <li><a href="https://vn.msi.com/"><img src="res/img/hang2.png" alt=""></a></li>
-            <li><a href="https://www.logitech.com/vi-vn"><img src="res/img/hang3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="res/img/hang1.png" alt=""></a></li>
+            <li><a href="#"><img src="res/img/hang2.png" alt=""></a></li>
+            <li><a href="#"><img src="res/img/hang3.png" alt=""></a></li>
           </div>
           <div>
-            <li><a href="http://www.kingmax.com.tw/en-global/home/index"><img src="res/img/hang4.jpg" alt=""></a></li>
-            <li><a href="https://www.kingston.com/vn"><img src="res/img/hang5.jpg" alt=""></a></li>
-            <li><a href="https://www.intel.vn/content/www/vn/vi/homepage.html"><img src="res/img/hang6.jpg" alt=""></a></li>
+            <li><a href="#"><img src="res/img/hang4.png" alt=""></a></li>
+            <li><a href="#"><img src="res/img/hang5.png" alt=""></a></li>
+            <li><a href="#"><img src="res/img/hang6.png" alt=""></a></li>
           </div>
         </ul>
       </div>

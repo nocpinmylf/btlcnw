@@ -9,7 +9,7 @@
   </div>
   <div>
     <!-- slide 3 -->
-    <a href=""><img data-lazy="res/img/slide/slide3.png" alt="slide 3"></a>
+    <a href=""><img data-lazy="res/img/slide/slide3.jpg" alt="slide 3"></a>
   </div>
   <div>
     <!-- slide 4 -->
